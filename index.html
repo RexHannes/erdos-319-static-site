@@ -5,38 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A straightforward academic blog page for Erdos 319 Lean notes, fixed-Q progress, and downloadable references."
+      content="Erdos 319 progress notes and Lean formalization blueprint. This page is a status record, not a proof."
     >
-    <title>Erdos 319</title>
+    <title>Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Erdos 319 home">Erdos 319</a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#part-1">Part 1</a>
-        <a href="#part-2">Part 2</a>
-        <a href="#part-3">Part 3</a>
-        <a href="#part-4">Part 4</a>
-        <a href="#part-5">References</a>
-        <a href="#part-6">Addendum</a>
+        <a href="#status">Status</a>
+        <a href="#ledger">Ledger</a>
+        <a href="#not-claimed">Not Claimed</a>
+        <a href="#lean">Lean</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#next">Next</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
         <p class="date">Updated 5 June 2026</p>
-        <h1 id="page-title">Erdos 319</h1>
+        <h1 id="page-title">Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</h1>
         <p class="subtitle">
-          A concise academic-style record for notes, structure, and follow-up
-          references.
+          A curated status page for exploratory work on Erdős Problem #319:
+          what is formalizable, what is conditional, and what remains open.
         </p>
-        <div class="update-panel" aria-label="Main update">
-          <h2>The main update is:</h2>
+
+        <div class="status-box" id="status" aria-label="Current status">
+          <h2>Current Status</h2>
+          <p>
+            This page does not claim a solution to Erdős Problem #319. The
+            problem remains open. The material here records AI-assisted
+            exploratory progress: elementary reformulations, Lean-facing proof
+            obligations, fixed-<code>Q</code> partial theorem candidates, and
+            remaining analytic interfaces.
+          </p>
+          <p class="source-note">
+            The official Erdős Problems page currently marks #319 as open,
+            records no claimed partial or complete solution in comments, and
+            lists the Adenwalla/Croot lower bound plus formalisation of the
+            statement in Lean.
+            <a href="https://www.erdosproblems.com/319">Official #319 page</a>
+          </p>
+        </div>
+
+        <div class="update-panel" aria-label="Abstract">
+          <h2>Abstract</h2>
+          <ul class="plain-list">
+            <li>Erdős #319 is treated as a primitive signed reciprocal circuit problem.</li>
+            <li>The elementary core is the <code>P</code>/<code>Q</code> spectrum-intersection reformulation.</li>
+            <li>The fixed-<code>Q</code> gate programme gives a promising partial route.</li>
+            <li>The Liu-Sawhney interface, arbitrary <code>Q</code>, growing <code>Q_N</code>, and full asymptotic upper bound remain unresolved.</li>
+          </ul>
+        </div>
+      </section>
+
+      <article class="article">
+        <section id="ledger" class="part">
+          <div class="part-number">Status Ledger</div>
+          <h2>What Is Stable, Conditional, Or Open</h2>
+          <table class="status-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Current status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Problem and notation</td>
+                <td>Stable</td>
+              </tr>
+              <tr>
+                <td>Primitive circuit definition</td>
+                <td>Elementary / formalizable</td>
+              </tr>
+              <tr>
+                <td>Spectrum-intersection criterion</td>
+                <td>Lean-verifiable target; proof obligation remains</td>
+              </tr>
+              <tr>
+                <td>Singleton-side optimality</td>
+                <td>Theorem candidate / needs proof audit</td>
+              </tr>
+              <tr>
+                <td>Fixed-Q dynamic gate</td>
+                <td>Promising partial theorem candidate</td>
+              </tr>
+              <tr>
+                <td>Sigma_Q joint gate</td>
+                <td>Likely useful lemma candidate</td>
+              </tr>
+              <tr>
+                <td>Prime-only fixed Q</td>
+                <td>Conditional on reachability</td>
+              </tr>
+              <tr>
+                <td>Composite/mixed Q</td>
+                <td>Reduced to target-selection / zero-sum / cross-number obstruction</td>
+              </tr>
+              <tr>
+                <td>Growing Q_N</td>
+                <td>Long-term / unresolved</td>
+              </tr>
+              <tr>
+                <td>Full Erdős #319</td>
+                <td>Open</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="not-claimed" class="part">
+          <div class="part-number">Guardrails</div>
+          <h2>What Is Not Claimed</h2>
+          <ul class="note-list">
+            <li>We do not claim to have solved Erdős #319.</li>
+            <li>We do not claim a sorry-free Lean proof.</li>
+            <li>We do not claim arbitrary fixed <code>Q</code> is solved.</li>
+            <li>We do not claim the Liu-Sawhney interface has been fully verified.</li>
+          </ul>
+        </section>
+
+        <section id="lean" class="part">
+          <div class="part-number">Lean Blueprint</div>
+          <h2>Formalization Core</h2>
+          <p>
+            The Lean-facing decomposition separates elementary definitions from
+            analytic black boxes. Snippets containing <code>sorry</code> are
+            labelled as proof obligations, not completed Lean proofs.
+          </p>
+          <pre><code>def Sigma (X : Finset Nat) : Finset Rat :=
+  (X.powerset.image R)
+
+theorem primitive_iff_spectrum_intersection (C : Circuit) :
+    Primitive C ↔
+      forall x, x ∈ Sigma C.P -&gt; x ∈ Sigma C.Q -&gt;
+        x = 0 ∨ x = totalMass C := by
+  -- Proof obligation, not completed Lean proof.
+  sorry</code></pre>
+          <pre><code>theorem fixed_Q_dynamic_gate_schema
+    (C : Circuit) (Q' : Finset Nat) (epsilon theta : Real)
+    (hQ'Q : Q' ⊆ C.Q)
+    (hQ'nonempty : Q'.Nonempty)
+    (hQ'proper : Q' ≠ C.Q)
+    (hgood : EpsilonGoodTarget C.Q Q' epsilon theta)
+    (hhit : exists B : Finset Nat, B ⊆ C.P /\ R B = R Q') :
+    ¬ Primitive C := by
+  -- Proof obligation, not completed Lean proof.
+  sorry</code></pre>
+        </section>
+
+        <section id="fixed-q" class="part">
+          <div class="part-number">Fixed-Q Update</div>
+          <h2>Sharper But Still Open</h2>
           <p>
             Arbitrary fixed <code>Q</code> is now closer, but still open. The
-            new progress is not a full proof, but a sharper ledger: fixed-<code>Q</code>
-            gate theorem architecture, a likely provable
+            new progress is not a full proof, but a sharper ledger:
+            fixed-<code>Q</code> gate theorem architecture, a likely provable
             <code>sigma_Q</code> joint gate, a prime-only fixed-<code>Q</code>
             route conditional on Liu-Sawhney, and a reduction of composite/mixed
             fixed <code>Q</code> to a target-selection / zero-sum / cross-number
@@ -44,54 +171,12 @@
             long-term.
           </p>
           <p>
-            The important correction is also now explicit: the attempted
-            one-line cross-number closure fails because <code>K(C_n)=1</code>
-            is false in the needed sense for composite cyclic groups; the
-            <code>C_6</code> example with cross number <code>4/3</code> must be
-            preserved as a red-team correction.
+            The important correction is explicit: the attempted one-line
+            cross-number closure fails because <code>K(C_n)=1</code> is false
+            in the needed sense for composite cyclic groups. The <code>C_6</code>
+            example with cross number <code>4/3</code> is preserved as a
+            red-team correction.
           </p>
-          <table class="status-table">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Updated status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Fixed-Q singleton gate</td>
-                <td>Strong architecture; Liu-Sawhney audit still pending</td>
-              </tr>
-              <tr>
-                <td>Phi_q gate</td>
-                <td>Mostly elementary/checkable</td>
-              </tr>
-              <tr>
-                <td>sigma_Q joint gate</td>
-                <td>Likely one of the strongest genuinely provable new lemmas</td>
-              </tr>
-              <tr>
-                <td>Prime-only fixed Q</td>
-                <td>Likely close, conditional on reachability</td>
-              </tr>
-              <tr>
-                <td>Composite/mixed fixed Q</td>
-                <td>Reduced to target-selection / zero-sum / cross-number</td>
-              </tr>
-              <tr>
-                <td>Arbitrary fixed Q</td>
-                <td>Closer, but still open</td>
-              </tr>
-              <tr>
-                <td>Growing Q_N</td>
-                <td>Long-term; constants may collapse</td>
-              </tr>
-              <tr>
-                <td>Full Erdős #319</td>
-                <td>Still open</td>
-              </tr>
-            </tbody>
-          </table>
           <p>
             We have not solved Erdős #319. The strongest new progress is a
             fixed-negative-side programme: a Phi-based gate theorem candidate, a
@@ -105,131 +190,11 @@
             reciprocal-realizable atom obstruction. This is genuine progress,
             but not a completed theorem or a full solution.
           </p>
-        </div>
-      </section>
-
-      <article class="article">
-        <section id="part-1" class="part">
-          <div class="part-number">Part 1</div>
-          <h2>Problem And Notation</h2>
-          <p>
-            Erdős Problem #319 is treated here as a signed reciprocal circuit
-            problem. For a finite set <code>X</code>, write
-            <code>R(X) = sum_{x in X} 1/x</code>. A signed set is split into
-            two disjoint sides <code>P</code> and <code>Q</code>, with the
-            balance condition <code>R(P) = R(Q)</code>.
-          </p>
-          <p>
-            The formalization keeps the elementary combinatorial core separate
-            from analytic number-theory inputs such as Croot, Bloom, and
-            Liu-Sawhney style unit-fraction theorems.
-          </p>
-          <pre><code>def R (X : Finset Nat) : Rat :=
-  X.sum (fun n => if h : n = 0 then 0 else (1 : Rat) / (n : Rat))</code></pre>
         </section>
 
-        <section id="part-2" class="part">
-          <div class="part-number">Part 2</div>
-          <h2>Primitive Circuits</h2>
-          <p>
-            A circuit is primitive when it has no non-empty proper signed
-            zero-subcircuit. In Lean-facing terms, that means there are no
-            proper subsets <code>P' subset P</code> and
-            <code>Q' subset Q</code> with equal reciprocal sums, except for the
-            empty collision and the full collision.
-          </p>
-          <p>
-            This is the first clean part of the programme: it is elementary,
-            precise, and does not require analytic black boxes.
-          </p>
-          <pre><code>structure Circuit where
-  P : Finset Nat
-  Q : Finset Nat
-  disjoint : Disjoint P Q
-  positiveP : forall n in P, 0 &lt; n
-  positiveQ : forall n in Q, 0 &lt; n
-  balanced : R P = R Q</code></pre>
-        </section>
-
-        <section id="part-3" class="part">
-          <div class="part-number">Part 3</div>
-          <h2>Spectrum Criterion</h2>
-          <p>
-            Define the subset-sum spectrum
-            <code>Sigma(X) = { R(X') : X' subset X }</code>. Then a signed
-            circuit is primitive exactly when the two spectra intersect only at
-            <code>0</code> and the total reciprocal mass <code>S</code>.
-          </p>
-          <p>
-            This theorem is the main Lean-verifiable target in the current
-            blueprint.
-          </p>
-          <pre><code>def Sigma (X : Finset Nat) : Finset Rat :=
-  (X.powerset.image R)
-
-theorem primitive_iff_spectrum_intersection (C : Circuit) :
-    Primitive C ↔
-      forall x, x ∈ Sigma C.P -&gt; x ∈ Sigma C.Q -&gt;
-        x = 0 ∨ x = totalMass C := by
-  sorry</code></pre>
-        </section>
-
-        <section id="part-4" class="part">
-          <div class="part-number">Part 4</div>
-          <h2>Proof Programme</h2>
-          <p>
-            The progress report separates what is currently elementary from
-            what remains analytic. The spectrum reformulation is ready for
-            formal proof; the full Erdős #319 upper-bound problem remains open.
-          </p>
-          <ul class="note-list">
-            <li>Singleton-side optimality gives a clean subclass theorem.</li>
-            <li>Large-prime-factor obstruction is useful but needs audit.</li>
-            <li>Fixed-<code>Q</code> dynamic gates reduce cases to target reachability.</li>
-            <li>Analytic inputs should be stated as explicit theorem assumptions.</li>
-          </ul>
-          <pre><code>theorem fixed_Q_dynamic_gate_schema
-    (C : Circuit) (Q' : Finset Nat) (epsilon theta : Real)
-    (hQ'Q : Q' ⊆ C.Q)
-    (hQ'nonempty : Q'.Nonempty)
-    (hQ'proper : Q' ≠ C.Q)
-    (hgood : EpsilonGoodTarget C.Q Q' epsilon theta)
-    (hhit : exists B : Finset Nat, B ⊆ C.P /\ R B = R Q') :
-    ¬ Primitive C := by
-  -- A hit B with R B = R Q' creates a proper zero-subcircuit.
-  sorry</code></pre>
-        </section>
-
-        <section id="part-5" class="part">
-          <div class="part-number">Part 5</div>
-          <h2>Downloadable Reference</h2>
-          <p>
-            The attached <code>Doc.pdf</code> is preserved here as the current
-            downloadable reference.
-          </p>
-          <a
-            class="download"
-            href="references/doc.pdf"
-            download
-          >
-            <span>
-              <strong>Doc.pdf</strong>
-              <small>Erdős 319 reference PDF, 5 June 2026</small>
-            </span>
-            <span class="download-action">Download PDF</span>
-          </a>
-        </section>
-
-        <section id="part-6" class="part">
-          <div class="part-number">Part 6</div>
-          <h2>Q-Ledger Addendum</h2>
-          <p>
-            The addendum keeps the positive progress while also recording the
-            correction. Fixed-<code>Q</code> gate, <code>sigma_Q</code> joint
-            gate, prime-only fixed <code>Q</code>, and the target-selection
-            route are now organized as explicit proof tasks, not scattered
-            brainstorm notes.
-          </p>
+        <section id="addendum" class="part">
+          <div class="part-number">Q-Ledger Addendum</div>
+          <h2>Why The Addendum Matters</h2>
           <p lang="zh-Hant">
             正面進展被保留下來：fixed-Q gate、sigma_Q joint gate、prime-only
             fixed Q、target-selection route 都被整理成明確 proof tasks，而不是散亂
@@ -248,47 +213,80 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
             一句話：addendum 的價值不是宣稱解了 #319，而是把 arbitrary fixed Q
             從模糊障礙變成一組可審核、可計算、可 formalize 的具體問題。
           </p>
-          <div class="download-list" aria-label="Addendum downloads">
-            <a
-              class="download"
-              href="references/erdos319-q-ledger-addendum-v02.pdf"
-              download
-            >
-              <span>
-                <strong>Q-Ledger Addendum v0.2</strong>
-                <small>PDF addendum, 5 June 2026</small>
-              </span>
+        </section>
+
+        <section id="downloads" class="part">
+          <div class="part-number">Documents</div>
+          <h2>Download Cards</h2>
+          <p>
+            The homepage is a curated status page. The full reports, source
+            notes, and Lean blueprints are kept as downloadable documents.
+          </p>
+          <div class="download-grid" aria-label="Project downloads">
+            <a class="download" href="references/erdos319-progress-report.pdf" download>
+              <span><strong>Progress Report PDF</strong><small>Polished progress report</small></span>
               <span class="download-action">Download PDF</span>
             </a>
-            <a
-              class="download"
-              href="references/erdos319-q-ledger-addendum-v02.md"
-              download
-            >
-              <span>
-                <strong>Q-Ledger Addendum Markdown</strong>
-                <small>Source notes for the addendum</small>
-              </span>
+            <a class="download" href="references/erdos319-progress-report.docx" download>
+              <span><strong>Progress Report DOCX</strong><small>Editable report document</small></span>
+              <span class="download-action">Download DOCX</span>
+            </a>
+            <a class="download" href="references/erdos319-progress-report.md" download>
+              <span><strong>Progress Report Markdown</strong><small>Source notes</small></span>
               <span class="download-action">Download MD</span>
             </a>
-            <a
-              class="download"
-              href="references/erdos319-lean-addendum-q-ledger.lean"
-              download
-            >
-              <span>
-                <strong>Lean Addendum Q-Ledger</strong>
-                <small>Lean-facing theorem-blueprint file</small>
-              </span>
+            <a class="download" href="references/erdos319-lean-blueprint.lean" download>
+              <span><strong>Lean Blueprint</strong><small>Formalization scaffold</small></span>
+              <span class="download-action">Download Lean</span>
+            </a>
+            <a class="download" href="references/erdos319-q-ledger-addendum-v02.pdf" download>
+              <span><strong>Q-Ledger Addendum PDF</strong><small>Fixed-Q update and correction</small></span>
+              <span class="download-action">Download PDF</span>
+            </a>
+            <a class="download" href="references/erdos319-q-ledger-addendum-v02.docx" download>
+              <span><strong>Q-Ledger Addendum DOCX</strong><small>Editable addendum document</small></span>
+              <span class="download-action">Download DOCX</span>
+            </a>
+            <a class="download" href="references/erdos319-q-ledger-addendum-v02.md" download>
+              <span><strong>Q-Ledger Addendum Markdown</strong><small>Addendum source notes</small></span>
+              <span class="download-action">Download MD</span>
+            </a>
+            <a class="download" href="references/erdos319-lean-addendum-q-ledger.lean" download>
+              <span><strong>Lean Addendum Blueprint</strong><small>Q-ledger theorem blueprint</small></span>
               <span class="download-action">Download Lean</span>
             </a>
           </div>
+        </section>
+
+        <section id="archive" class="part">
+          <div class="part-number">Archive</div>
+          <h2>Raw Conversation Log</h2>
+          <p>
+            The raw transcript is kept separately from the polished progress
+            documents. It is useful as context, not as the main public reference.
+          </p>
+          <a class="download" href="references/doc.pdf" download>
+            <span><strong>Doc.pdf</strong><small>Archive / raw conversation log</small></span>
+            <span class="download-action">Download PDF</span>
+          </a>
+        </section>
+
+        <section id="next" class="part">
+          <div class="part-number">Next Steps</div>
+          <h2>Work To Audit Next</h2>
+          <ul class="note-list">
+            <li>Audit the exact Liu-Sawhney proposition and pruning lemmas.</li>
+            <li>Prove the elementary spectrum criterion in Lean.</li>
+            <li>Formalize the fixed-<code>Q</code> gate contradiction.</li>
+            <li>Test target-selection obstructions for composite <code>Q</code>.</li>
+            <li>Separate provable finite/computational certificates from conjectural analytic bridges.</li>
+          </ul>
         </section>
       </article>
     </main>
 
     <footer class="footer">
-      <p>Erdos 319 - static academic notes site.</p>
+      <p>Erdos 319 - progress record and formalization blueprint, not a proof.</p>
     </footer>
   </body>
 </html>

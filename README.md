@@ -1,13 +1,22 @@
-# Erdos 319
+# Erdos #319 Progress Notes and Formalization Blueprint
 
-A straightforward static academic-blog style site for Erdos 319 Lean notes.
+A curated status page for Erdos #319 exploratory progress. This is a progress
+record and formalization blueprint, not a claimed proof or solution.
 
-The current reference PDF is included at:
+Progress report files:
 
-`references/doc.pdf`
+- `references/erdos319-progress-report.pdf`
+- `references/erdos319-progress-report.docx`
+- `references/erdos319-progress-report.md`
+- `references/erdos319-lean-blueprint.lean`
 
-The Q-ledger addendum files are included at:
+Q-ledger addendum files:
 
 - `references/erdos319-q-ledger-addendum-v02.pdf`
+- `references/erdos319-q-ledger-addendum-v02.docx`
 - `references/erdos319-q-ledger-addendum-v02.md`
 - `references/erdos319-lean-addendum-q-ledger.lean`
+
+Archive:
+
+- `references/doc.pdf`
