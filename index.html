@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A straightforward academic blog page for Erdos 319, with notes and a downloadable GPT/GPT Pro reference PDF."
+      content="A straightforward academic blog page for Erdos 319 Lean notes, fixed-Q progress, and downloadable references."
     >
     <title>Erdos 319</title>
     <link rel="stylesheet" href="styles.css">
@@ -19,6 +19,7 @@
         <a href="#part-3">Part 3</a>
         <a href="#part-4">Part 4</a>
         <a href="#part-5">References</a>
+        <a href="#part-6">Addendum</a>
       </nav>
     </header>
 
@@ -30,6 +31,81 @@
           A concise academic-style record for notes, structure, and follow-up
           references.
         </p>
+        <div class="update-panel" aria-label="Main update">
+          <h2>The main update is:</h2>
+          <p>
+            Arbitrary fixed <code>Q</code> is now closer, but still open. The
+            new progress is not a full proof, but a sharper ledger: fixed-<code>Q</code>
+            gate theorem architecture, a likely provable
+            <code>sigma_Q</code> joint gate, a prime-only fixed-<code>Q</code>
+            route conditional on Liu-Sawhney, and a reduction of composite/mixed
+            fixed <code>Q</code> to a target-selection / zero-sum / cross-number
+            obstruction problem. Growing <code>Q_N</code> and full #319 remain
+            long-term.
+          </p>
+          <p>
+            The important correction is also now explicit: the attempted
+            one-line cross-number closure fails because <code>K(C_n)=1</code>
+            is false in the needed sense for composite cyclic groups; the
+            <code>C_6</code> example with cross number <code>4/3</code> must be
+            preserved as a red-team correction.
+          </p>
+          <table class="status-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Updated status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fixed-Q singleton gate</td>
+                <td>Strong architecture; Liu-Sawhney audit still pending</td>
+              </tr>
+              <tr>
+                <td>Phi_q gate</td>
+                <td>Mostly elementary/checkable</td>
+              </tr>
+              <tr>
+                <td>sigma_Q joint gate</td>
+                <td>Likely one of the strongest genuinely provable new lemmas</td>
+              </tr>
+              <tr>
+                <td>Prime-only fixed Q</td>
+                <td>Likely close, conditional on reachability</td>
+              </tr>
+              <tr>
+                <td>Composite/mixed fixed Q</td>
+                <td>Reduced to target-selection / zero-sum / cross-number</td>
+              </tr>
+              <tr>
+                <td>Arbitrary fixed Q</td>
+                <td>Closer, but still open</td>
+              </tr>
+              <tr>
+                <td>Growing Q_N</td>
+                <td>Long-term; constants may collapse</td>
+              </tr>
+              <tr>
+                <td>Full Erdős #319</td>
+                <td>Still open</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            We have not solved Erdős #319. The strongest new progress is a
+            fixed-negative-side programme: a Phi-based gate theorem candidate, a
+            joint-avoidance <code>sigma_Q</code> local-mass lemma, and a
+            reduction of arbitrary fixed <code>Q</code> to a finite
+            target-selection problem. The latter now has a precise
+            zero-sum/cross-number formulation. A proposed one-line closure was
+            rejected after finding a cyclic-group counterexample, so the
+            remaining task is sharply localized: verify the Liu-Sawhney
+            reachability interface and prove or classify the
+            reciprocal-realizable atom obstruction. This is genuine progress,
+            but not a completed theorem or a full solution.
+          </p>
+        </div>
       </section>
 
       <article class="article">
@@ -142,6 +218,71 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
             </span>
             <span class="download-action">Download PDF</span>
           </a>
+        </section>
+
+        <section id="part-6" class="part">
+          <div class="part-number">Part 6</div>
+          <h2>Q-Ledger Addendum</h2>
+          <p>
+            The addendum keeps the positive progress while also recording the
+            correction. Fixed-<code>Q</code> gate, <code>sigma_Q</code> joint
+            gate, prime-only fixed <code>Q</code>, and the target-selection
+            route are now organized as explicit proof tasks, not scattered
+            brainstorm notes.
+          </p>
+          <p lang="zh-Hant">
+            正面進展被保留下來：fixed-Q gate、sigma_Q joint gate、prime-only
+            fixed Q、target-selection route 都被整理成明確 proof tasks，而不是散亂
+            brainstorm。
+          </p>
+          <p lang="zh-Hant">
+            錯誤也被正式記錄：cross-number 的 one-line closure 被 C6
+            counterexample 擊破，所以 addendum 防止我們誤稱 arbitrary fixed Q 已解。
+          </p>
+          <p lang="zh-Hant">
+            剩下問題變清楚了：現在不是 vague gap，而是幾個精確缺口 - Liu-Sawhney
+            interface、composite target-selection、reciprocal-realizable atom
+            cross-number bound、以及 growing Q_N 的 uniformity。
+          </p>
+          <p lang="zh-Hant">
+            一句話：addendum 的價值不是宣稱解了 #319，而是把 arbitrary fixed Q
+            從模糊障礙變成一組可審核、可計算、可 formalize 的具體問題。
+          </p>
+          <div class="download-list" aria-label="Addendum downloads">
+            <a
+              class="download"
+              href="references/erdos319-q-ledger-addendum-v02.pdf"
+              download
+            >
+              <span>
+                <strong>Q-Ledger Addendum v0.2</strong>
+                <small>PDF addendum, 5 June 2026</small>
+              </span>
+              <span class="download-action">Download PDF</span>
+            </a>
+            <a
+              class="download"
+              href="references/erdos319-q-ledger-addendum-v02.md"
+              download
+            >
+              <span>
+                <strong>Q-Ledger Addendum Markdown</strong>
+                <small>Source notes for the addendum</small>
+              </span>
+              <span class="download-action">Download MD</span>
+            </a>
+            <a
+              class="download"
+              href="references/erdos319-lean-addendum-q-ledger.lean"
+              download
+            >
+              <span>
+                <strong>Lean Addendum Q-Ledger</strong>
+                <small>Lean-facing theorem-blueprint file</small>
+              </span>
+              <span class="download-action">Download Lean</span>
+            </a>
+          </div>
         </section>
       </article>
     </main>
