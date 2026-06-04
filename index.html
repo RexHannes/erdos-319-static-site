@@ -35,80 +35,110 @@
       <article class="article">
         <section id="part-1" class="part">
           <div class="part-number">Part 1</div>
-          <h2>Overview</h2>
+          <h2>Problem And Notation</h2>
           <p>
-            This page is arranged as a simple reading note rather than a formal
-            paper. It is designed to keep the current Erdos 319 material easy to
-            scan, easy to update, and easy to share.
+            Erdős Problem #319 is treated here as a signed reciprocal circuit
+            problem. For a finite set <code>X</code>, write
+            <code>R(X) = sum_{x in X} 1/x</code>. A signed set is split into
+            two disjoint sides <code>P</code> and <code>Q</code>, with the
+            balance condition <code>R(P) = R(Q)</code>.
           </p>
           <p>
-            The purpose is practical: collect the working context in one static
-            page, separate the main parts clearly, and preserve the attached
-            GPT/GPT Pro chat history as a downloadable reference.
+            The formalization keeps the elementary combinatorial core separate
+            from analytic number-theory inputs such as Croot, Bloom, and
+            Liu-Sawhney style unit-fraction theorems.
           </p>
+          <pre><code>def R (X : Finset Nat) : Rat :=
+  X.sum (fun n => if h : n = 0 then 0 else (1 : Rat) / (n : Rat))</code></pre>
         </section>
 
         <section id="part-2" class="part">
           <div class="part-number">Part 2</div>
-          <h2>Context</h2>
+          <h2>Primitive Circuits</h2>
           <p>
-            The page keeps the discussion in a neutral academic-blog format:
-            short paragraphs, clear section headings, and a narrow text column
-            for comfortable reading.
+            A circuit is primitive when it has no non-empty proper signed
+            zero-subcircuit. In Lean-facing terms, that means there are no
+            proper subsets <code>P' subset P</code> and
+            <code>Q' subset Q</code> with equal reciprocal sums, except for the
+            empty collision and the full collision.
           </p>
           <p>
-            It avoids heavy visual design so that the substance stays central.
-            The structure can be expanded later with citations, diagrams,
-            problem statements, or proof notes as needed.
+            This is the first clean part of the programme: it is elementary,
+            precise, and does not require analytic black boxes.
           </p>
+          <pre><code>structure Circuit where
+  P : Finset Nat
+  Q : Finset Nat
+  disjoint : Disjoint P Q
+  positiveP : forall n in P, 0 &lt; n
+  positiveQ : forall n in Q, 0 &lt; n
+  balanced : R P = R Q</code></pre>
         </section>
 
         <section id="part-3" class="part">
           <div class="part-number">Part 3</div>
-          <h2>Working Structure</h2>
+          <h2>Spectrum Criterion</h2>
           <p>
-            The five-part layout gives the material a stable frame:
-            introduction, context, structure, next points, and references.
-            That makes it easier to revise one section without disturbing the
-            rest of the page.
+            Define the subset-sum spectrum
+            <code>Sigma(X) = { R(X') : X' subset X }</code>. Then a signed
+            circuit is primitive exactly when the two spectra intersect only at
+            <code>0</code> and the total reciprocal mass <code>S</code>.
           </p>
           <p>
-            Each part is intentionally compact. Future edits can add specific
-            definitions, examples, or quotations while preserving the same
-            readable outline.
+            This theorem is the main Lean-verifiable target in the current
+            blueprint.
           </p>
+          <pre><code>def Sigma (X : Finset Nat) : Finset Rat :=
+  (X.powerset.image R)
+
+theorem primitive_iff_spectrum_intersection (C : Circuit) :
+    Primitive C ↔
+      forall x, x ∈ Sigma C.P -&gt; x ∈ Sigma C.Q -&gt;
+        x = 0 ∨ x = totalMass C := by
+  sorry</code></pre>
         </section>
 
         <section id="part-4" class="part">
           <div class="part-number">Part 4</div>
-          <h2>Current Notes</h2>
+          <h2>Proof Programme</h2>
           <p>
-            This section records the main working points in a compact form.
-            It can be revised directly as the Erdos 319 material becomes more
-            precise or as additional sources are added.
+            The progress report separates what is currently elementary from
+            what remains analytic. The spectrum reformulation is ready for
+            formal proof; the full Erdős #319 upper-bound problem remains open.
           </p>
           <ul class="note-list">
-            <li>Keep the statement of the topic short and precise.</li>
-            <li>Separate definitions, observations, and conclusions.</li>
-            <li>Use the reference PDF for today&apos;s GPT/GPT Pro discussion.</li>
+            <li>Singleton-side optimality gives a clean subclass theorem.</li>
+            <li>Large-prime-factor obstruction is useful but needs audit.</li>
+            <li>Fixed-<code>Q</code> dynamic gates reduce cases to target reachability.</li>
+            <li>Analytic inputs should be stated as explicit theorem assumptions.</li>
           </ul>
+          <pre><code>theorem fixed_Q_dynamic_gate_schema
+    (C : Circuit) (Q' : Finset Nat) (epsilon theta : Real)
+    (hQ'Q : Q' ⊆ C.Q)
+    (hQ'nonempty : Q'.Nonempty)
+    (hQ'proper : Q' ≠ C.Q)
+    (hgood : EpsilonGoodTarget C.Q Q' epsilon theta)
+    (hhit : exists B : Finset Nat, B ⊆ C.P /\ R B = R Q') :
+    ¬ Primitive C := by
+  -- A hit B with R B = R Q' creates a proper zero-subcircuit.
+  sorry</code></pre>
         </section>
 
         <section id="part-5" class="part">
           <div class="part-number">Part 5</div>
           <h2>Downloadable Reference</h2>
           <p>
-            The attached PDF from today is preserved here as a direct download
-            for later comparison and review.
+            The attached <code>Doc.pdf</code> is preserved here as the current
+            downloadable reference.
           </p>
           <a
             class="download"
-            href="references/gpt-gpt-pro-chat-history-2026-06-05.pdf"
+            href="references/doc.pdf"
             download
           >
             <span>
-              <strong>GPT/GPT Pro chat history</strong>
-              <small>PDF reference, 5 June 2026</small>
+              <strong>Doc.pdf</strong>
+              <small>Erdős 319 reference PDF, 5 June 2026</small>
             </span>
             <span class="download-action">Download PDF</span>
           </a>
