@@ -10,7 +10,7 @@ This is not a claimed solution of Erdős Problem #319. The current public status
 2. A spectrum-intersection criterion for primitivity.
 3. A separation between the known Croot/Adenwalla lower-bound mechanism and the genuinely open upper-bound/minimality problem.
 4. Finite computational evidence near the constant 1 - 1/e, useful as validation but not as proof.
-5. A small but clean singleton-side theorem: the Croot/Adenwalla constant is asymptotically optimal when one sign class has exactly one element.
+5. A singleton-side theorem candidate / subclass result, subject to proof audit: the Croot/Adenwalla constant is expected to be asymptotically optimal when one sign class has exactly one element.
 6. A fixed-Q proof programme using dynamic gates, target selection, and Liu-Sawhney-type reachability.
 7. A Lean-facing scaffold in which the elementary combinatorial layer can be verified, while the analytic unit-fraction machinery is isolated as explicit black-box assumptions.
 
@@ -79,7 +79,7 @@ Proof. A signed subcircuit is determined by subsets P' subset P and Q' subset Q.
 
 This proof is fully formalizable without analytic number theory.
 
-## 5. Proof-level output B: singleton-side optimality
+## 5. Proof-level output B: singleton-side optimality candidate
 
 Define c_1(N) to be the largest size of a primitive #319 circuit in {1,...,N} in which one sign class has exactly one denominator.
 
@@ -105,7 +105,7 @@ so
 
 This is maximized at d = 1, giving alpha <= 1 - 1/e + o(1). The matching lower bound is the Croot/Adenwalla construction with singleton denominator 1.
 
-This is not a full solution of #319, because in the full problem both sign classes may be large. But it is a genuine and clean subclass theorem.
+This is not a full solution of #319, because in the full problem both sign classes may be large. It should be treated as a theorem candidate / subclass result until the proof is audited and written independently.
 
 ## 6. Proof-level output C: large-prime-factor obstruction
 
@@ -219,7 +219,7 @@ A good Aristotle/Lean claim is therefore:
 | Spectrum-intersection reformulation | Proven/elementary; ready for Lean. |
 | Croot/Adenwalla lower bound | Known literature; explains 1 - 1/e. |
 | Computations near N = 50,60 | Useful evidence; not proof. |
-| Singleton-side theorem | Clean theorem; likely first writeable result. |
+| Singleton-side theorem | Candidate subclass result; proof audit needed. |
 | Large-prime-factor obstruction | Useful but modest; audit exact statement. |
 | Fixed-Q dynamic-gate theorem | Serious conditional theorem candidate. |
 | Cross-number target selection | Promising but unaudited candidate. |
@@ -229,7 +229,7 @@ A good Aristotle/Lean claim is therefore:
 
 Over the first few days, we did not solve Erdős Problem #319, but we achieved a structured reduction and formalization programme. We reformulated the problem as one about primitive signed reciprocal circuits and subset-sum spectrum intersections. This separated the known Croot/Adenwalla lower-bound construction from the genuinely open upper-bound/minimality direction.
 
-We obtained a clean subclass theorem: the known constant 1 - 1/e is asymptotically optimal among singleton-side signed circuits. We also identified a large-prime-factor obstruction and a fixed-Q dynamic-gate strategy that reduces several cases to explicit target-reachability inputs from Croot/Bloom/Liu-Sawhney-type unit-fraction machinery.
+We isolated a singleton-side subclass result candidate: the known constant 1 - 1/e should be asymptotically optimal among singleton-side signed circuits, subject to a proof audit. We also identified a large-prime-factor obstruction and a fixed-Q dynamic-gate strategy that reduces several cases to explicit target-reachability inputs from Croot/Bloom/Liu-Sawhney-type unit-fraction machinery.
 
 The current research frontier is the arbitrary fixed-Q problem. It has been reduced to target selection, small-epsilon near-extremal stability, and a target-r Liu-Sawhney interface. The full problem, where both sign classes may grow with N, remains substantially harder and likely requires a two-sided spectrum-intersection theorem.
 
