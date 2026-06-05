@@ -11,6 +11,7 @@ record and formalization blueprint, not a claimed proof or solution.
 | Claimed solution | No |
 | Lean proof | No; blueprint and proof obligations only |
 | Fixed-Q gate programme | Substantive theorem-candidate architecture |
+| B=6 Lean milestone | Consolidated update note added; exact-order bridge and clean B=6 certificate reported |
 | Singleton-side result | Theorem candidate / subclass result, subject to proof audit |
 | Q-ledger addendum | Current best progress/correction |
 | Raw transcript | Archive only; not the curated mathematical report |
@@ -19,6 +20,10 @@ record and formalization blueprint, not a claimed proof or solution.
 
 Start with [`SUBSIDY_SUMMARY.md`](SUBSIDY_SUMMARY.md) for the one-page
 reviewer-facing summary. The public site source is [`index.html`](index.html).
+
+Latest Lean milestone update:
+
+- `references/codex-update-erdos319-2026-06-05.md` - Codex upload/project update noting the B=6 milestone, exact-order bridge, clean subgroup-count theorem, B=10 placeholder caveat, and recommended audit commands.
 
 Progress report files:
 
@@ -41,3 +46,4 @@ Archive:
 Release package:
 
 - `v0.2-progress-package` contains the downloadable PDF/DOCX/MD/Lean assets.
+- `v0.3-b6-milestone-update` contains the latest Codex update note and core package assets.

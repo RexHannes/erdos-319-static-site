@@ -86,6 +86,10 @@
                 <td>Lean-verifiable target; proof obligation remains</td>
               </tr>
               <tr>
+                <td>B=6 Lean milestone</td>
+                <td>Codex update reports exact-order bridge, clean subgroup-count theorem, and clean B=6 certificate</td>
+              </tr>
+              <tr>
                 <td>Singleton-side optimality</td>
                 <td>Theorem candidate / needs proof audit</td>
               </tr>
@@ -215,6 +219,24 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
           </p>
         </section>
 
+        <section id="b6-update" class="part">
+          <div class="part-number">Latest Lean Milestone</div>
+          <h2>B=6 Formal Update</h2>
+          <p>
+            The 2026-06-05 Codex update records a consolidated B=6 milestone:
+            an exact-order bridge, a cleaned reciprocal subgroup-count theorem,
+            and a clean B=6 obstruction certificate. It also preserves the
+            important audit caveat that the wider Lean project is not
+            sorry-free while the B10 certificate file remains a placeholder.
+          </p>
+          <ul class="note-list">
+            <li>Exact-order theorem: <code>addOrderOf_aqMap_eq_badPart</code>.</li>
+            <li>Clean subgroup-count theorem: <code>reciprocal_subgroup_count_unconditional_clean</code>.</li>
+            <li>Clean B=6 certificate: <code>recipSum_le_one_of_obstructionB_eq_six_clean</code>.</li>
+            <li>Next target: prove the B=10 certificate without adding new permanent <code>sorry</code>, <code>admit</code>, or custom <code>axiom</code>.</li>
+          </ul>
+        </section>
+
         <section id="downloads" class="part">
           <div class="part-number">Documents</div>
           <h2>Download Cards</h2>
@@ -254,6 +276,10 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
             <a class="download" href="references/erdos319-lean-addendum-q-ledger.lean" download>
               <span><strong>Lean Addendum Blueprint</strong><small>Q-ledger theorem blueprint</small></span>
               <span class="download-action">Download Lean</span>
+            </a>
+            <a class="download" href="references/codex-update-erdos319-2026-06-05.md" download>
+              <span><strong>Codex Update Note</strong><small>B=6 milestone and audit prompt</small></span>
+              <span class="download-action">Download MD</span>
             </a>
           </div>
         </section>

@@ -14,6 +14,9 @@ solution of Erdős Problem #319.
 - Added the Q-ledger correction: the one-line cross-number closure is rejected
   by the composite cyclic-group counterexample, so arbitrary fixed `Q` remains
   open.
+- Added a 2026-06-05 Codex update note recording a B=6 formal milestone:
+  exact-order bridge, cleaned subgroup-count theorem, clean B=6 obstruction
+  certificate, and audit caveats around remaining `sorry` placeholders.
 
 ## What Is Not Claimed
 
@@ -37,6 +40,7 @@ recorded correction preventing overclaiming.
 | Problem and notation | Stable |
 | Primitive circuit definition | Elementary / formalizable |
 | Spectrum-intersection criterion | Lean-verifiable target; proof obligation remains |
+| B=6 obstruction certificate | Reported as the current clean formal milestone in the Codex update note |
 | Singleton-side optimality | Candidate subclass result; proof audit needed |
 | Fixed-Q dynamic gate | Promising partial theorem candidate |
 | Sigma_Q joint gate | Likely useful lemma candidate |
@@ -53,3 +57,5 @@ recorded correction preventing overclaiming.
 - Test target-selection obstructions for composite `Q`.
 - Separate provable finite/computational certificates from conjectural analytic
   bridges.
+- Treat B=6 as frozen and continue next with the B=10 certificate, without
+  claiming the whole repository is sorry-free while the B10 placeholder remains.
