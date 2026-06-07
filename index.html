@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Erdos 319 progress notes, Growth-Q entropy checkpoint, and Lean formalization blueprint. This page is a status record, not a proof."
+      content="Erdos 319 progress notes, Growth-Q entropy checkpoint, red-team checklist, and Lean formalization blueprint. This page is a status record, not a proof."
     >
     <title>Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</title>
     <link rel="stylesheet" href="styles.css">
@@ -17,6 +17,7 @@
         <a href="#status">Status</a>
         <a href="#ledger">Ledger</a>
         <a href="#growth-q">Growth-Q</a>
+        <a href="#red-team">Red Team</a>
         <a href="#not-claimed">Not Claimed</a>
         <a href="#lean">Lean</a>
         <a href="#downloads">Downloads</a>
@@ -44,9 +45,12 @@
             computational evidence, and remaining analytic interfaces.
           </p>
           <p>
-            The latest update adds a Growth-<code>Q</code> entropy checkpoint:
-            the naive bounded primitive smooth-support route has been corrected
-            to an <code>L1</code>-weighted signed-kernel energy framework.
+            The latest update adds a Growth-<code>Q</code> entropy checkpoint and
+            red-team checklist. The naive bounded primitive smooth-support route
+            has been corrected to an <code>L1</code>-weighted signed-kernel energy
+            framework, with explicit caveats about entropy-formula status,
+            support-3 classification, universal cardinality, and collision-counting
+            convention.
           </p>
           <p class="source-note">
             The official Erdős Problems page currently marks #319 as open,
@@ -64,6 +68,7 @@
             <li>The elementary core is the <code>P</code>/<code>Q</code> spectrum-intersection reformulation.</li>
             <li>The fixed-<code>Q</code> gate programme gives a promising partial route.</li>
             <li>The Growth-<code>Q</code> route is now an entropy/energy framework, not a bounded-support claim.</li>
+            <li>The red-team update prevents overclaiming about what is Lean-proved versus algebraic, computational, or conjectural.</li>
             <li>The Liu-Sawhney interface, arbitrary <code>Q</code>, growing <code>Q_N</code>, and full asymptotic upper bound remain unresolved.</li>
           </ul>
         </div>
@@ -100,6 +105,10 @@
               <tr>
                 <td>Growth-Q entropy route</td>
                 <td>2026-06-08 checkpoint: bounded smooth-support route corrected to L1-weighted signed-kernel energy framework</td>
+              </tr>
+              <tr>
+                <td>Growth-Q red-team status</td>
+                <td>Critical corrections recorded before public note: entropy formula status, support-3 completeness, universal cardinality, and ordered collision-count convention</td>
               </tr>
               <tr>
                 <td>Singleton-side optimality</td>
@@ -147,11 +156,12 @@
           <p>
             The corrected framework studies reciprocal subset-sum collision
             probability through an <code>L1</code>-weighted signed-kernel energy
-            spectrum. In this view, a signed kernel vector with support <code>s</code>
-            is exponentially downweighted by <code>2^{-s}</code>. Therefore long
-            identities are not automatically fatal; the remaining question is
-            whether sufficiently many long identities can collectively dominate
-            the weighted energy.
+            spectrum. A signed kernel vector with support <code>s</code> is
+            exponentially downweighted by <code>2^{-s}</code>; however, the
+            red-team caveat is essential: exponentially many long identities can
+            still have macroscopic total weight. The mature target is therefore
+            the Dominant Short-Energy Conjecture, not the informal claim that
+            long identities do not matter.
           </p>
           <p>
             Current finite Kaggle experiments for smooth regimes such as
@@ -159,6 +169,17 @@
             dominance after forbidding short identities, but this is finite
             computational evidence, not a theorem and not a proof of #319.
           </p>
+        </section>
+
+        <section id="red-team" class="part">
+          <div class="part-number">Red-Team Corrections</div>
+          <h2>Four Claims Tightened Before Public Writing</h2>
+          <ul class="note-list">
+            <li>The entropy-deficit formula should be called an algebraic corollary of the collision-count decomposition unless the exact theorem appears in Lean.</li>
+            <li>Support-3 smooth identities should not be advertised as completely Lean-classified unless a single assembled theorem exists.</li>
+            <li>The unbounded-support construction has an all-<code>t</code> chain-sum theorem, but universal cardinality statements need separate audit if only small cases were checked by <code>native_decide</code>.</li>
+            <li>The collision formula must specify ordered colliding pairs and canonical reduced disjoint signed supports.</li>
+          </ul>
         </section>
 
         <section id="not-claimed" class="part">
@@ -171,6 +192,7 @@
             <li>We do not claim the Liu-Sawhney interface has been fully verified.</li>
             <li>We do not claim finite random energy-spectrum evidence proves the Growth-<code>Q</code> case.</li>
             <li>We do not claim bounded primitive smooth support; that route is now explicitly rejected.</li>
+            <li>We do not claim the entropy-deficit formula is a standalone Lean theorem unless the exact no-sorry theorem is present.</li>
           </ul>
         </section>
 
@@ -291,6 +313,10 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
               <span><strong>Growth-Q Energy Freeze</strong><small>2026-06-08 checkpoint note</small></span>
               <span class="download-action">Download MD</span>
             </a>
+            <a class="download" href="references/growth-q-red-team-checklist-2026-06-08.md" download>
+              <span><strong>Growth-Q Red-Team Checklist</strong><small>Critical pre-publication corrections</small></span>
+              <span class="download-action">Download MD</span>
+            </a>
             <a class="download" href="references/erdos319-progress-report.pdf" download>
               <span><strong>Progress Report PDF</strong><small>Polished progress report</small></span>
               <span class="download-action">Download PDF</span>
@@ -348,6 +374,7 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
           <h2>Work To Audit Next</h2>
           <ul class="note-list">
             <li>Attach or archive the Growth-Q reproducibility bundle: <code>FinalGrowthQStatus.md</code>, <code>EnergySpectrum.lean</code>, <code>UnboundedSupport.lean</code>, <code>Smooth23Analysis.md</code>, Kaggle CSVs, and Aristotle export.</li>
+            <li>Apply the Growth-Q red-team checklist before writing the public research note.</li>
             <li>Red-team theorem-status labels: Lean-proved, Lean-supported, computational, heuristic, or conjectural.</li>
             <li>Audit the exact Liu-Sawhney proposition and pruning lemmas.</li>
             <li>Prove the elementary spectrum criterion in Lean.</li>
