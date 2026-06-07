@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Erdos 319 progress notes, Growth-Q entropy checkpoint, red-team checklist, and Lean formalization blueprint. This page is a status record, not a proof."
+      content="Erdos 319 progress notes, Growth-Q formal backbone checkpoint, entropy staircase evidence, red-team checklist, and Lean formalization blueprint. This page is a status record, not a proof."
     >
     <title>Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</title>
     <link rel="stylesheet" href="styles.css">
@@ -16,10 +16,10 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#status">Status</a>
         <a href="#ledger">Ledger</a>
+        <a href="#formal-backbone">Formal</a>
         <a href="#growth-q">Growth-Q</a>
-        <a href="#red-team">Red Team</a>
+        <a href="#staircase">Staircase</a>
         <a href="#not-claimed">Not Claimed</a>
-        <a href="#lean">Lean</a>
         <a href="#downloads">Downloads</a>
         <a href="#next">Next</a>
       </nav>
@@ -31,7 +31,7 @@
         <h1 id="page-title">Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</h1>
         <p class="subtitle">
           A curated status page for exploratory work on Erdős Problem #319:
-          what is formalizable, what is computational evidence, what is conditional,
+          what is formalized, what is computational evidence, what is conjectural,
           and what remains open.
         </p>
 
@@ -45,12 +45,10 @@
             computational evidence, and remaining analytic interfaces.
           </p>
           <p>
-            The latest update adds a Growth-<code>Q</code> entropy checkpoint and
-            red-team checklist. The naive bounded primitive smooth-support route
-            has been corrected to an <code>L1</code>-weighted signed-kernel energy
-            framework, with explicit caveats about entropy-formula status,
-            support-3 classification, universal cardinality, and collision-counting
-            convention.
+            The latest update records a Growth-<code>Q</code> formal-backbone
+            checkpoint: the exact finite collision-count theorem and rational
+            collision-probability corollary are reported Lean-proved, while the
+            Dominant Short-Energy Conjecture and #319 bridge remain open.
           </p>
           <p class="source-note">
             The official Erdős Problems page currently marks #319 as open,
@@ -65,11 +63,10 @@
           <h2>Abstract</h2>
           <ul class="plain-list">
             <li>Erdős #319 is treated as a primitive signed reciprocal circuit problem.</li>
-            <li>The elementary core is the <code>P</code>/<code>Q</code> spectrum-intersection reformulation.</li>
-            <li>The fixed-<code>Q</code> gate programme gives a promising partial route.</li>
             <li>The Growth-<code>Q</code> route is now an entropy/energy framework, not a bounded-support claim.</li>
-            <li>The red-team update prevents overclaiming about what is Lean-proved versus algebraic, computational, or conjectural.</li>
-            <li>The Liu-Sawhney interface, arbitrary <code>Q</code>, growing <code>Q_N</code>, and full asymptotic upper bound remain unresolved.</li>
+            <li>The exact finite collision-count identity is reported Lean-proved as <code>#Collisions = 2^k + Σ_s E_s(Q)2^(k-s)</code>.</li>
+            <li>The y=13 Kaggle staircase supports bounded short-energy dominance in the tested regime.</li>
+            <li>The Dominant Short-Energy Conjecture, target-realization bridge, arbitrary <code>Q</code>, growing <code>Q_N</code>, and full asymptotic upper bound remain unresolved.</li>
           </ul>
         </div>
       </section>
@@ -77,7 +74,7 @@
       <article class="article">
         <section id="ledger" class="part">
           <div class="part-number">Status Ledger</div>
-          <h2>What Is Stable, Conditional, Or Open</h2>
+          <h2>What Is Stable, Formalized, Conditional, Or Open</h2>
           <table class="status-table">
             <thead>
               <tr>
@@ -87,98 +84,141 @@
             </thead>
             <tbody>
               <tr>
-                <td>Problem and notation</td>
-                <td>Stable</td>
+                <td>Full Erdős #319</td>
+                <td>Open; no solution claimed</td>
               </tr>
               <tr>
-                <td>Primitive circuit definition</td>
-                <td>Elementary / formalizable</td>
+                <td>Full Lean proof of #319</td>
+                <td>No</td>
               </tr>
               <tr>
-                <td>Spectrum-intersection criterion</td>
-                <td>Lean-verifiable target; proof obligation remains</td>
+                <td>Growth-Q formal backbone</td>
+                <td>2026-06-08 checkpoint: exact finite collision-count theorem and rational CP corollary reported Lean-proved</td>
               </tr>
               <tr>
-                <td>B=6 Lean milestone</td>
-                <td>Codex update reports exact-order bridge, clean subgroup-count theorem, and clean B=6 certificate</td>
+                <td>Dominant Short-Energy Conjecture</td>
+                <td>Open; formal statements only, deliberately conjectural</td>
               </tr>
               <tr>
-                <td>Growth-Q entropy route</td>
-                <td>2026-06-08 checkpoint: bounded smooth-support route corrected to L1-weighted signed-kernel energy framework</td>
+                <td>Unbounded primitive smooth support</td>
+                <td>Naive bounded-support route rejected; all-<code>t</code> cardinality theorem reported proved</td>
+              </tr>
+              <tr>
+                <td>Smooth23 support-3 families</td>
+                <td>Type I/II/III families reported proved; completeness not Lean-proved</td>
               </tr>
               <tr>
                 <td>Growth-Q red-team status</td>
-                <td>Critical corrections recorded before public note: entropy formula status, support-3 completeness, universal cardinality, and ordered collision-count convention</td>
+                <td>Critical corrections recorded before public note: entropy formula status, support-3 completeness, cardinality, and ordered collision-count convention</td>
               </tr>
               <tr>
-                <td>Singleton-side optimality</td>
-                <td>Theorem candidate / needs proof audit</td>
+                <td>B=6 Lean milestone</td>
+                <td>Earlier consolidated update note added; exact-order bridge and clean B=6 certificate reported</td>
               </tr>
               <tr>
-                <td>Fixed-Q dynamic gate</td>
-                <td>Promising partial theorem candidate</td>
-              </tr>
-              <tr>
-                <td>Sigma_Q joint gate</td>
-                <td>Likely useful lemma candidate</td>
-              </tr>
-              <tr>
-                <td>Prime-only fixed Q</td>
-                <td>Conditional on reachability</td>
-              </tr>
-              <tr>
-                <td>Composite/mixed Q</td>
-                <td>Reduced to target-selection / zero-sum / cross-number obstruction</td>
-              </tr>
-              <tr>
-                <td>Growing Q_N</td>
-                <td>Long-term / unresolved</td>
-              </tr>
-              <tr>
-                <td>Full Erdős #319</td>
-                <td>Open</td>
+                <td>Fixed-Q gate programme</td>
+                <td>Substantive theorem-candidate architecture; still not a proof of #319</td>
               </tr>
             </tbody>
           </table>
+        </section>
+
+        <section id="formal-backbone" class="part">
+          <div class="part-number">Formal Backbone</div>
+          <h2>Exact Collision-Energy Decomposition</h2>
+          <p>
+            The formal-backbone checkpoint reports a Lean-proved finite counting
+            identity for ordered subset-sum collisions. If <code>k = |Q|</code>
+            and <code>E_s(Q)</code> counts oriented nonzero reduced signed kernel
+            vectors of support <code>s</code>, then:
+          </p>
+          <pre><code># ordered collisions = 2^k + Σ_s E_s(Q) · 2^(k-s)</code></pre>
+          <p>
+            The reported theorem is <code>collisionPairs_card_eq_diagonal_add_energy</code>
+            in <code>RequestProject/EnergySpectrumExact.lean</code>. The corresponding
+            rational collision-probability theorem is reported as
+            <code>collisionProbability_eq</code>:
+          </p>
+          <pre><code>CP(Q) = (1 + Σ_s E_s(Q) · 2^(-s)) / 2^k</code></pre>
+          <p>
+            This does not prove the Dominant Short-Energy Conjecture. It gives the
+            energy-spectrum framework a precise finite combinatorial foundation.
+          </p>
         </section>
 
         <section id="growth-q" class="part">
           <div class="part-number">Growth-Q Energy Checkpoint</div>
           <h2>Bounded Support Is False; Energy Compression Survives</h2>
           <p>
-            The 2026-06-08 checkpoint records a correction to the Growth-<code>Q</code>
-            programme. The naive hope that primitive smooth reciprocal identities
-            have bounded total support is false. A reported Lean milestone gives
-            an unbounded family already among <code>(2,3)</code>-smooth composite
-            denominators, starting from <code>1/6 = 1/8 + 1/24</code> and using
-            the recursive split <code>1/n = 1/(2n) + 1/(3n) + 1/(6n)</code>.
+            The naive hope that primitive smooth reciprocal identities have
+            bounded total support is false. The reported <code>UnboundedSupport.lean</code>
+            milestone proves an all-<code>t</code> cardinality theorem for an infinite
+            family generated from <code>1/6 = 1/8 + 1/24</code> and the recursive split
+            <code>1/n = 1/(2n) + 1/(3n) + 1/(6n)</code>.
           </p>
           <p>
             The corrected framework studies reciprocal subset-sum collision
             probability through an <code>L1</code>-weighted signed-kernel energy
             spectrum. A signed kernel vector with support <code>s</code> is
-            exponentially downweighted by <code>2^{-s}</code>; however, the
-            red-team caveat is essential: exponentially many long identities can
-            still have macroscopic total weight. The mature target is therefore
-            the Dominant Short-Energy Conjecture, not the informal claim that
-            long identities do not matter.
+            exponentially downweighted by <code>2^{-s}</code>; however, exponentially
+            many long identities could still have macroscopic total weight. The
+            mature target is therefore the Dominant Short-Energy Conjecture.
           </p>
+        </section>
+
+        <section id="staircase" class="part">
+          <div class="part-number">Computational Staircase</div>
+          <h2>y=13 Adversarial Support-Layer Collapse</h2>
           <p>
-            Current finite Kaggle experiments for smooth regimes such as
-            <code>y=7, N=50</code> and <code>y=11, N=60</code> support short-energy
-            dominance after forbidding short identities, but this is finite
-            computational evidence, not a theorem and not a proof of #319.
+            The current Kaggle y=13 adversarial experiments give the following
+            finite computational staircase in the <code>N=80,k=10</code> require-13 regime:
+          </p>
+          <table class="status-table">
+            <thead>
+              <tr>
+                <th>Filter</th>
+                <th>Best D</th>
+                <th>Min support</th>
+                <th>Tail / total weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>anti-support ≤ 6</td>
+                <td>0.221587</td>
+                <td>7</td>
+                <td>0.166016</td>
+              </tr>
+              <tr>
+                <td>anti-support ≤ 7</td>
+                <td>0.068778</td>
+                <td>8</td>
+                <td>0.048828</td>
+              </tr>
+              <tr>
+                <td>anti-support ≤ 8</td>
+                <td>0.019591</td>
+                <td>9</td>
+                <td>0.013672</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            The best anti≤6 spectrum is small and bounded-support:
+            <code>E_7=12, E_8=14, E_9=8, E_10=2</code>. The best anti≤7 spectrum is
+            <code>E_8=8, E_9=8, E_10=2</code>. This supports bounded short-energy
+            dominance in the tested regime, but remains computational evidence.
           </p>
         </section>
 
         <section id="red-team" class="part">
           <div class="part-number">Red-Team Corrections</div>
-          <h2>Four Claims Tightened Before Public Writing</h2>
+          <h2>Claims Tightened Before Public Writing</h2>
           <ul class="note-list">
-            <li>The entropy-deficit formula should be called an algebraic corollary of the collision-count decomposition unless the exact theorem appears in Lean.</li>
+            <li>The logarithmic entropy-deficit formula should be labelled an algebraic/log corollary unless a separate Lean theorem over logs is added.</li>
             <li>Support-3 smooth identities should not be advertised as completely Lean-classified unless a single assembled theorem exists.</li>
-            <li>The unbounded-support construction has an all-<code>t</code> chain-sum theorem, but universal cardinality statements need separate audit if only small cases were checked by <code>native_decide</code>.</li>
-            <li>The collision formula must specify ordered colliding pairs and canonical reduced disjoint signed supports.</li>
+            <li>The exact collision formula must specify ordered colliding pairs and canonical reduced disjoint signed supports.</li>
+            <li>The Dominant Short-Energy Conjecture remains open even after the exact counting theorem.</li>
           </ul>
         </section>
 
@@ -188,127 +228,54 @@
           <ul class="note-list">
             <li>We do not claim to have solved Erdős #319.</li>
             <li>We do not claim a full sorry-free Lean proof of Erdős #319.</li>
-            <li>We do not claim arbitrary fixed <code>Q</code> is solved.</li>
+            <li>We do not claim arbitrary fixed <code>Q</code> or growing <code>Q_N</code> is solved.</li>
             <li>We do not claim the Liu-Sawhney interface has been fully verified.</li>
-            <li>We do not claim finite random energy-spectrum evidence proves the Growth-<code>Q</code> case.</li>
-            <li>We do not claim bounded primitive smooth support; that route is now explicitly rejected.</li>
-            <li>We do not claim the entropy-deficit formula is a standalone Lean theorem unless the exact no-sorry theorem is present.</li>
+            <li>We do not claim the Dominant Short-Energy Conjecture has been proved.</li>
+            <li>We do not claim finite Kaggle evidence proves an asymptotic theorem.</li>
           </ul>
-        </section>
-
-        <section id="lean" class="part">
-          <div class="part-number">Lean Blueprint</div>
-          <h2>Formalization Core</h2>
-          <p>
-            The Lean-facing decomposition separates elementary definitions from
-            analytic black boxes. Snippets containing <code>sorry</code> are
-            labelled as proof obligations, not completed Lean proofs.
-          </p>
-          <pre><code>def Sigma (X : Finset Nat) : Finset Rat :=
-  (X.powerset.image R)
-
-theorem primitive_iff_spectrum_intersection (C : Circuit) :
-    Primitive C ↔
-      forall x, x ∈ Sigma C.P -&gt; x ∈ Sigma C.Q -&gt;
-        x = 0 ∨ x = totalMass C := by
-  -- Proof obligation, not completed Lean proof.
-  sorry</code></pre>
-          <pre><code>theorem fixed_Q_dynamic_gate_schema
-    (C : Circuit) (Q' : Finset Nat) (epsilon theta : Real)
-    (hQ'Q : Q' ⊆ C.Q)
-    (hQ'nonempty : Q'.Nonempty)
-    (hQ'proper : Q' ≠ C.Q)
-    (hgood : EpsilonGoodTarget C.Q Q' epsilon theta)
-    (hhit : exists B : Finset Nat, B ⊆ C.P /\ R B = R Q') :
-    ¬ Primitive C := by
-  -- Proof obligation, not completed Lean proof.
-  sorry</code></pre>
         </section>
 
         <section id="fixed-q" class="part">
           <div class="part-number">Fixed-Q Update</div>
           <h2>Sharper But Still Open</h2>
           <p>
-            Arbitrary fixed <code>Q</code> is now closer, but still open. The
-            new progress is not a full proof, but a sharper ledger:
-            fixed-<code>Q</code> gate theorem architecture, a likely provable
-            <code>sigma_Q</code> joint gate, a prime-only fixed-<code>Q</code>
-            route conditional on Liu-Sawhney, and a reduction of composite/mixed
-            fixed <code>Q</code> to a target-selection / zero-sum / cross-number
-            obstruction problem. Growing <code>Q_N</code> and full #319 remain
-            long-term.
-          </p>
-          <p>
-            The important correction is explicit: the attempted one-line
-            cross-number closure fails because <code>K(C_n)=1</code> is false
-            in the needed sense for composite cyclic groups. The <code>C_6</code>
-            example with cross number <code>4/3</code> is preserved as a
-            red-team correction.
-          </p>
-          <p>
-            We have not solved Erdős #319. The strongest new progress is a
-            fixed-negative-side programme: a Phi-based gate theorem candidate, a
-            joint-avoidance <code>sigma_Q</code> local-mass lemma, and a
-            reduction of arbitrary fixed <code>Q</code> to a finite
-            target-selection problem. The latter now has a precise
-            zero-sum/cross-number formulation. A proposed one-line closure was
-            rejected after finding a cyclic-group counterexample, so the
-            remaining task is sharply localized: verify the Liu-Sawhney
-            reachability interface and prove or classify the
-            reciprocal-realizable atom obstruction. This is genuine progress,
-            but not a completed theorem or a full solution.
-          </p>
-        </section>
-
-        <section id="addendum" class="part">
-          <div class="part-number">Q-Ledger Addendum</div>
-          <h2>Why The Addendum Matters</h2>
-          <p lang="zh-Hant">
-            正面進展被保留下來：fixed-Q gate、sigma_Q joint gate、prime-only
-            fixed Q、target-selection route 都被整理成明確 proof tasks，而不是散亂
-            brainstorm。
+            Arbitrary fixed <code>Q</code> is closer as a theorem-candidate programme,
+            but remains open. The earlier Q-ledger addendum preserves the fixed-<code>Q</code>
+            gate theorem architecture, sigma-Q local-mass lemma, prime-only route,
+            and the composite/mixed target-selection obstruction.
           </p>
           <p lang="zh-Hant">
-            錯誤也被正式記錄：cross-number 的 one-line closure 被 C6
-            counterexample 擊破，所以 addendum 防止我們誤稱 arbitrary fixed Q 已解。
-          </p>
-          <p lang="zh-Hant">
-            剩下問題變清楚了：現在不是 vague gap，而是幾個精確缺口 - Liu-Sawhney
-            interface、composite target-selection、reciprocal-realizable atom
-            cross-number bound、以及 growing Q_N 的 uniformity。
-          </p>
-          <p lang="zh-Hant">
-            一句話：addendum 的價值不是宣稱解了 #319，而是把 arbitrary fixed Q
-            從模糊障礙變成一組可審核、可計算、可 formalize 的具體問題。
+            一句話：這些更新的價值不是宣稱解了 #319，而是把模糊障礙變成一組可審核、可計算、可 formalize 的具體問題。
           </p>
         </section>
 
         <section id="b6-update" class="part">
-          <div class="part-number">Latest Lean Milestone</div>
+          <div class="part-number">Earlier Lean Milestone</div>
           <h2>B=6 Formal Update</h2>
           <p>
             The 2026-06-05 Codex update records a consolidated B=6 milestone:
             an exact-order bridge, a cleaned reciprocal subgroup-count theorem,
-            and a clean B=6 obstruction certificate. It also preserves the
-            important audit caveat that the wider Lean project is not
-            sorry-free while the B10 certificate file remains a placeholder.
+            and a clean B=6 obstruction certificate. It remains separate from the
+            Growth-Q formal-backbone checkpoint.
           </p>
-          <ul class="note-list">
-            <li>Exact-order theorem: <code>addOrderOf_aqMap_eq_badPart</code>.</li>
-            <li>Clean subgroup-count theorem: <code>reciprocal_subgroup_count_unconditional_clean</code>.</li>
-            <li>Clean B=6 certificate: <code>recipSum_le_one_of_obstructionB_eq_six_clean</code>.</li>
-            <li>Next target: prove the B=10 certificate without adding new permanent <code>sorry</code>, <code>admit</code>, or custom <code>axiom</code>.</li>
-          </ul>
         </section>
 
         <section id="downloads" class="part">
           <div class="part-number">Documents</div>
           <h2>Download Cards</h2>
           <p>
-            The homepage is a curated status page. The full reports, source
-            notes, and Lean blueprints are kept as downloadable documents.
+            The homepage is a curated status page. The full reports, source notes,
+            and Lean blueprints are kept as downloadable documents.
           </p>
           <div class="download-grid" aria-label="Project downloads">
+            <a class="download" href="references/growth-q-formal-backbone-2026-06-08.md" download>
+              <span><strong>Growth-Q Formal Backbone</strong><small>Exact collision-energy checkpoint</small></span>
+              <span class="download-action">Download MD</span>
+            </a>
+            <a class="download" href="references/growthq-formal-backbone-status-2026-06-08.md" download>
+              <span><strong>Formal Backbone Status</strong><small>Aristotle theorem ledger</small></span>
+              <span class="download-action">Download MD</span>
+            </a>
             <a class="download" href="references/growth-q-energy-freeze-2026-06-08.md" download>
               <span><strong>Growth-Q Energy Freeze</strong><small>2026-06-08 checkpoint note</small></span>
               <span class="download-action">Download MD</span>
@@ -337,18 +304,6 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
               <span><strong>Q-Ledger Addendum PDF</strong><small>Fixed-Q update and correction</small></span>
               <span class="download-action">Download PDF</span>
             </a>
-            <a class="download" href="references/erdos319-q-ledger-addendum-v02.docx" download>
-              <span><strong>Q-Ledger Addendum DOCX</strong><small>Editable addendum document</small></span>
-              <span class="download-action">Download DOCX</span>
-            </a>
-            <a class="download" href="references/erdos319-q-ledger-addendum-v02.md" download>
-              <span><strong>Q-Ledger Addendum Markdown</strong><small>Addendum source notes</small></span>
-              <span class="download-action">Download MD</span>
-            </a>
-            <a class="download" href="references/erdos319-lean-addendum-q-ledger.lean" download>
-              <span><strong>Lean Addendum Blueprint</strong><small>Q-ledger theorem blueprint</small></span>
-              <span class="download-action">Download Lean</span>
-            </a>
             <a class="download" href="references/codex-update-erdos319-2026-06-05.md" download>
               <span><strong>Codex Update Note</strong><small>B=6 milestone and audit prompt</small></span>
               <span class="download-action">Download MD</span>
@@ -373,14 +328,10 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
           <div class="part-number">Next Steps</div>
           <h2>Work To Audit Next</h2>
           <ul class="note-list">
-            <li>Attach or archive the Growth-Q reproducibility bundle: <code>FinalGrowthQStatus.md</code>, <code>EnergySpectrum.lean</code>, <code>UnboundedSupport.lean</code>, <code>Smooth23Analysis.md</code>, Kaggle CSVs, and Aristotle export.</li>
-            <li>Apply the Growth-Q red-team checklist before writing the public research note.</li>
-            <li>Red-team theorem-status labels: Lean-proved, Lean-supported, computational, heuristic, or conjectural.</li>
-            <li>Audit the exact Liu-Sawhney proposition and pruning lemmas.</li>
-            <li>Prove the elementary spectrum criterion in Lean.</li>
-            <li>Formalize the fixed-<code>Q</code> gate contradiction.</li>
-            <li>Test target-selection obstructions for composite <code>Q</code>.</li>
-            <li>Separate provable finite/computational certificates from conjectural analytic bridges.</li>
+            <li>Audit theorem labels against the Aristotle bundle: Lean-proved, conjectural, computational, or Markdown-only.</li>
+            <li>Attach or archive the selected Lean files when ready: <code>EnergySpectrumExact.lean</code>, <code>CollisionProbability.lean</code>, <code>UnboundedSupport.lean</code>, <code>Smooth23.lean</code>, and <code>DominantShortEnergy.lean</code>.</li>
+            <li>Attempt a restricted <code>y=3</code> / <code>(2,3)</code>-smooth completeness or finite-energy theorem before attempting the full Dominant Short-Energy Conjecture.</li>
+            <li>Keep the full Erdős #319 bridge clearly separate from the Growth-Q formal backbone.</li>
           </ul>
         </section>
       </article>
