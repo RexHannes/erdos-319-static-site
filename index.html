@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Erdos 319 progress notes and Lean formalization blueprint. This page is a status record, not a proof."
+      content="Erdos 319 progress notes, Growth-Q entropy checkpoint, and Lean formalization blueprint. This page is a status record, not a proof."
     >
     <title>Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</title>
     <link rel="stylesheet" href="styles.css">
@@ -16,6 +16,7 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#status">Status</a>
         <a href="#ledger">Ledger</a>
+        <a href="#growth-q">Growth-Q</a>
         <a href="#not-claimed">Not Claimed</a>
         <a href="#lean">Lean</a>
         <a href="#downloads">Downloads</a>
@@ -25,11 +26,12 @@
 
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
-        <p class="date">Updated 5 June 2026</p>
+        <p class="date">Updated 8 June 2026</p>
         <h1 id="page-title">Erdos #319 Progress Notes and Formalization Blueprint - Not a Proof</h1>
         <p class="subtitle">
           A curated status page for exploratory work on Erdős Problem #319:
-          what is formalizable, what is conditional, and what remains open.
+          what is formalizable, what is computational evidence, what is conditional,
+          and what remains open.
         </p>
 
         <div class="status-box" id="status" aria-label="Current status">
@@ -38,8 +40,13 @@
             This page does not claim a solution to Erdős Problem #319. The
             problem remains open. The material here records AI-assisted
             exploratory progress: elementary reformulations, Lean-facing proof
-            obligations, fixed-<code>Q</code> partial theorem candidates, and
-            remaining analytic interfaces.
+            obligations, fixed-<code>Q</code> partial theorem candidates, finite
+            computational evidence, and remaining analytic interfaces.
+          </p>
+          <p>
+            The latest update adds a Growth-<code>Q</code> entropy checkpoint:
+            the naive bounded primitive smooth-support route has been corrected
+            to an <code>L1</code>-weighted signed-kernel energy framework.
           </p>
           <p class="source-note">
             The official Erdős Problems page currently marks #319 as open,
@@ -56,6 +63,7 @@
             <li>Erdős #319 is treated as a primitive signed reciprocal circuit problem.</li>
             <li>The elementary core is the <code>P</code>/<code>Q</code> spectrum-intersection reformulation.</li>
             <li>The fixed-<code>Q</code> gate programme gives a promising partial route.</li>
+            <li>The Growth-<code>Q</code> route is now an entropy/energy framework, not a bounded-support claim.</li>
             <li>The Liu-Sawhney interface, arbitrary <code>Q</code>, growing <code>Q_N</code>, and full asymptotic upper bound remain unresolved.</li>
           </ul>
         </div>
@@ -90,6 +98,10 @@
                 <td>Codex update reports exact-order bridge, clean subgroup-count theorem, and clean B=6 certificate</td>
               </tr>
               <tr>
+                <td>Growth-Q entropy route</td>
+                <td>2026-06-08 checkpoint: bounded smooth-support route corrected to L1-weighted signed-kernel energy framework</td>
+              </tr>
+              <tr>
                 <td>Singleton-side optimality</td>
                 <td>Theorem candidate / needs proof audit</td>
               </tr>
@@ -121,14 +133,44 @@
           </table>
         </section>
 
+        <section id="growth-q" class="part">
+          <div class="part-number">Growth-Q Energy Checkpoint</div>
+          <h2>Bounded Support Is False; Energy Compression Survives</h2>
+          <p>
+            The 2026-06-08 checkpoint records a correction to the Growth-<code>Q</code>
+            programme. The naive hope that primitive smooth reciprocal identities
+            have bounded total support is false. A reported Lean milestone gives
+            an unbounded family already among <code>(2,3)</code>-smooth composite
+            denominators, starting from <code>1/6 = 1/8 + 1/24</code> and using
+            the recursive split <code>1/n = 1/(2n) + 1/(3n) + 1/(6n)</code>.
+          </p>
+          <p>
+            The corrected framework studies reciprocal subset-sum collision
+            probability through an <code>L1</code>-weighted signed-kernel energy
+            spectrum. In this view, a signed kernel vector with support <code>s</code>
+            is exponentially downweighted by <code>2^{-s}</code>. Therefore long
+            identities are not automatically fatal; the remaining question is
+            whether sufficiently many long identities can collectively dominate
+            the weighted energy.
+          </p>
+          <p>
+            Current finite Kaggle experiments for smooth regimes such as
+            <code>y=7, N=50</code> and <code>y=11, N=60</code> support short-energy
+            dominance after forbidding short identities, but this is finite
+            computational evidence, not a theorem and not a proof of #319.
+          </p>
+        </section>
+
         <section id="not-claimed" class="part">
           <div class="part-number">Guardrails</div>
           <h2>What Is Not Claimed</h2>
           <ul class="note-list">
             <li>We do not claim to have solved Erdős #319.</li>
-            <li>We do not claim a sorry-free Lean proof.</li>
+            <li>We do not claim a full sorry-free Lean proof of Erdős #319.</li>
             <li>We do not claim arbitrary fixed <code>Q</code> is solved.</li>
             <li>We do not claim the Liu-Sawhney interface has been fully verified.</li>
+            <li>We do not claim finite random energy-spectrum evidence proves the Growth-<code>Q</code> case.</li>
+            <li>We do not claim bounded primitive smooth support; that route is now explicitly rejected.</li>
           </ul>
         </section>
 
@@ -245,6 +287,10 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
             notes, and Lean blueprints are kept as downloadable documents.
           </p>
           <div class="download-grid" aria-label="Project downloads">
+            <a class="download" href="references/growth-q-energy-freeze-2026-06-08.md" download>
+              <span><strong>Growth-Q Energy Freeze</strong><small>2026-06-08 checkpoint note</small></span>
+              <span class="download-action">Download MD</span>
+            </a>
             <a class="download" href="references/erdos319-progress-report.pdf" download>
               <span><strong>Progress Report PDF</strong><small>Polished progress report</small></span>
               <span class="download-action">Download PDF</span>
@@ -301,6 +347,8 @@ theorem primitive_iff_spectrum_intersection (C : Circuit) :
           <div class="part-number">Next Steps</div>
           <h2>Work To Audit Next</h2>
           <ul class="note-list">
+            <li>Attach or archive the Growth-Q reproducibility bundle: <code>FinalGrowthQStatus.md</code>, <code>EnergySpectrum.lean</code>, <code>UnboundedSupport.lean</code>, <code>Smooth23Analysis.md</code>, Kaggle CSVs, and Aristotle export.</li>
+            <li>Red-team theorem-status labels: Lean-proved, Lean-supported, computational, heuristic, or conjectural.</li>
             <li>Audit the exact Liu-Sawhney proposition and pruning lemmas.</li>
             <li>Prove the elementary spectrum criterion in Lean.</li>
             <li>Formalize the fixed-<code>Q</code> gate contradiction.</li>
