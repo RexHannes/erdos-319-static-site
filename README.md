@@ -18,7 +18,6 @@ record and formalization blueprint, not a claimed proof or solution.
 | Fixed-Q gate programme | Substantive theorem-candidate architecture |
 | Singleton-side result | Theorem candidate / subclass result, subject to proof audit |
 | Q-ledger addendum | Current best fixed-Q progress/correction |
-| Raw transcript | Archive only; not the curated mathematical report |
 
 ## Reviewer Summary
 
@@ -53,13 +52,9 @@ Q-ledger addendum files:
 - `references/erdos319-q-ledger-addendum-v02.md`
 - `references/erdos319-lean-addendum-q-ledger.lean`
 
-Archive:
-
-- `references/doc.pdf` - raw conversation archive only; not the curated mathematical report.
-
 Release package:
 
 - `v0.2-progress-package` contains the downloadable PDF/DOCX/MD/Lean assets.
 - `v0.3-b6-milestone-update` contains the Codex update note and core package assets.
 - `v0.4-growth-q-energy-freeze` contains the Growth-Q freeze note and red-team checklist.
-- `v0.5-growth-q-formal-backbone` should contain the formal-backbone checkpoint, Aristotle status ledger, selected Lean files, Kaggle staircase summaries, and the Aristotle archive where available.
+- `v0.5-growth-q-formal-backbone` should contain the formal-backbone checkpoint, Aristotle status ledger, selected Lean files, and Kaggle staircase summaries where available.
