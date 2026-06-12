@@ -24,7 +24,7 @@ solution of Erdős Problem #319.
 - No sorry-free Lean proof is claimed.
 - Arbitrary fixed `Q` is not claimed solved.
 - The Liu-Sawhney reachability interface is not claimed fully verified.
-- The raw chat transcript is archive material only, not a curated proof.
+- No raw chat transcript is published as part of this curated proof package.
 
 ## Why It Matters
 
